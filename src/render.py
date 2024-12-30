@@ -7,7 +7,7 @@ from bokeh.io import output_file
 from bokeh.models import ColumnDataSource
 
 
-def bokeh_visualise(data, target_filepath):
+def bokeh_visualise(data, target_filepath="court_cases.html"):
     """
     generates a HTML bar chart from the provided json data representing court cases
     """
@@ -65,7 +65,7 @@ def pychart_visualise(target_filepath):
         print(f"Error: An unexpected error occurred: {e}")
 
 
-def render_altair_chart(target_filepath):
+def altair_visualise(target_filepath):
     """
     renders an altair chart from the provided JSON file
     """

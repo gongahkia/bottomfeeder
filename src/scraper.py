@@ -122,15 +122,3 @@ def silly_scrape(target_url, storage_map, site_identifier="elit"):
         "paragraph_count": paragraph_count,
     }
     return storage_map
-
-
-def smart_scrape(target_url):
-    """
-    scrapes specified ELIT filepath and returns the coram
-    name(s), judgement date and number of paragraphs that also
-    differentiates material facts, obiter, ratio and final ruling
-
-    FUA might need to implement this by making calls to
-    a locally trained LLM
-    """
-    pass

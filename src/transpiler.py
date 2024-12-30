@@ -6,7 +6,7 @@ import xmltodict
 import pandas as pd
 
 
-def generate_latex(data, target_filepath):
+def generate_latex(data, target_filepath="courts_cases.tex"):
     """
     generates a latex document from the provided json data
     """
@@ -48,7 +48,7 @@ def generate_latex(data, target_filepath):
     print(f"Success: LaTeX document generated as {target_filepath}")
 
 
-def generate_csv(data, target_filepath):
+def generate_csv(data, target_filepath="courts_cases.csv"):
     """
     converts json data to a csv file
     """
@@ -69,7 +69,7 @@ def generate_csv(data, target_filepath):
     print(f"Success: CSV file generated at the filepath {target_filepath}")
 
 
-def generate_xml(data, target_filepath):
+def generate_xml(data, target_filepath="courts_cases.xml"):
     """
     converts JSON data to XML format
     """
@@ -79,7 +79,7 @@ def generate_xml(data, target_filepath):
     print(f"XML file generated: {target_filepath}")
 
 
-def generate_hdf5(data, target_filepath):
+def generate_hdf5(data, target_filepath="courts_cases.h5"):
     """
     converts JSON data to HDF5 format
     """
@@ -97,7 +97,7 @@ def generate_hdf5(data, target_filepath):
     print(f"Success: HDF5 file generated: {target_filepath}")
 
 
-def generate_pickle(data, target_filepath):
+def generate_pickle(data, target_filepath="courts_cases.pkl"):
     """
     converts JSON data to Pickle format
     """
@@ -106,7 +106,7 @@ def generate_pickle(data, target_filepath):
     print(f"Success: Pickle file generated: {target_filepath}")
 
 
-def generate_sql(data, target_db_name):
+def generate_sql(data, target_db_name="court_cases"):
     """
     converts JSON data to SQL format
     """
