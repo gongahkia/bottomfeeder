@@ -1,4 +1,8 @@
-all:config
+all:run
+
+run:
+	@echo "executing ./src/main.py"
+	@python3 src/main.py
 
 config: 
 	@echo "installing precommit hooks..."

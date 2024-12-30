@@ -10,7 +10,11 @@ Judges' stats, scraped from [Elit](https://www.elitigation.sg/_layouts/IELS/Home
 
 ## Usage
 
-> TODO add here
+```console
+$ git clone https://github.com/gongahkia/bottomfeeder
+$ make config
+$ make
+```
 
 ## Screenshot
 
