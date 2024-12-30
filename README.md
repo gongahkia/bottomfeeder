@@ -1,8 +1,15 @@
 [![](https://img.shields.io/badge/bottomfeeder_1.0-passing-green)](https://github.com/gongahkia/bottomfeeder/releases/tag/1.0)
 
+> [!IMPORTANT]  
+> Please read through [this disclaimer](#disclaimer) before using [Bottomfeeder](https://github.com/gongahkia/bottomfeeder).  
+
 # `Bottomfeeder` 🐟
 
-Judges' stats, scraped from [www.elitigation.sg](https://www.elitigation.sg/_layouts/IELS/HomePage/Pages/Home.aspx). 
+Judges' [stats](https://dictionary.cambridge.org/dictionary/english/stats) *(that are actually up-to-date)*!
+  
+Judges and their respective rulings extracted, indexed, analyzed and visualised.  
+  
+All data is scraped from [www.elitigation.sg](https://www.elitigation.sg/_layouts/IELS/HomePage/Pages/Home.aspx). 
 
 ## Rationale
 
@@ -250,6 +257,12 @@ $ git clone https://github.com/gongahkia/bottomfeeder
 $ make config
 $ make
 ```
+
+## Disclaimer
+
+This project performs a statistical analysis of publicly available judicial rulings and focuses only on the length of rulings, determined by number of paragraphs. The purpose of this analysis is purely data-driven, aiming to identify quantitative trends and patterns in the length of judicial opinions. It does not assess or evaluate the quality, appropriateness, or merit of any judicial decision, nor does it make any subjective judgment about the efficiency or effectiveness of the judges involved.
+
+By engaging with this project in any way, you acknowledge that the data and findings are for statistical purposes only and should not be construed as an assessment of any judge’s professional abilities or the substantive value of their rulings.
 
 ## Reference
 
