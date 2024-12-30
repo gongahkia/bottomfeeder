@@ -114,7 +114,7 @@ def silly_scrape(target_url, site_identifier="elit"):
             browser.close()
     wrapper = {
         title: {
-            "coram": judge_array,
+            "coram": [h.sanitise(judge) for judge in judge_array],
             "year": date_year,
             "court": court,
             "paragaph_count": paragaph_count,

@@ -1,3 +1,4 @@
+import re
 import json
 
 
@@ -17,6 +18,23 @@ def check_true_number(input_array):
     return len(set(input_array))
 
 
-# add a python function to remove html artifcats from text and have a nice string
+def sanitise(input_string):
+    """
+    removes HTML tags and unicode artifacts from a string
+    """
+    no_html = re.sub(r"<.*?>", "", input_string)
+    cleaned_text = re.sub(r"[^\x00-\x7F]+", "", no_html)
+    return cleaned_text.strip()
 
-# add a python function to strip strings of :
+
+def advanced_strip(input_string, strip_array):
+    """
+    strips any occurrences of specified strings from an input string
+    """
+    for item in strip_array:
+        while input_string.startswith(item):
+            input_string = input_string[len(item) :]
+    for item in reversed(strip_array):
+        while input_string.endswith(item):
+            input_string = input_string[: -len(item)]
+    return input_string
