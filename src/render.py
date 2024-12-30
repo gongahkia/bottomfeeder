@@ -65,7 +65,7 @@ def pychart_visualise(target_filepath):
         print(f"Error: An unexpected error occurred: {e}")
 
 
-def altair_visualise(target_filepath):
+def altair_visualise(target_filepath, output_filepath="court_cases.html"):
     """
     renders an altair chart from the provided JSON file
     """
@@ -80,4 +80,5 @@ def altair_visualise(target_filepath):
         .properties(title="Paragraph Counts in Court Cases")
         .interactive()
     )
+    chart.save(output_filepath)
     chart.show()
