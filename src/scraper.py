@@ -114,7 +114,10 @@ def silly_scrape(target_url, site_identifier="elit"):
             browser.close()
     wrapper = {
         title: {
-            "coram": [h.sanitise(judge) for judge in judge_array],
+            "coram": [
+                h.advanced_strip(h.remove_parentheses(h.sanitise(judge)), [":"])
+                for judge in judge_array
+            ],
             "year": date_year,
             "court": court,
             "paragaph_count": paragaph_count,

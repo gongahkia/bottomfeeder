@@ -38,3 +38,7 @@ def advanced_strip(input_string, strip_array):
         while input_string.endswith(item):
             input_string = input_string[: -len(item)]
     return input_string
+
+
+def remove_parentheses(input_string):
+    return re.sub(r"\s*\([^)]*\)", "", input_string).strip()
