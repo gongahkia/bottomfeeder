@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/bottomfeeder_1.0-passing-green)](https://github.com/gongahkia/bottomfeeder/releases/tag/1.0)
 
-# `Bottomfeeder` 💼
+# `Bottomfeeder` 🐟
 
 Judges' stats, scraped from [www.elitigation.sg](https://www.elitigation.sg/_layouts/IELS/HomePage/Pages/Home.aspx). 
 
