@@ -8,8 +8,10 @@ from playwright.sync_api import sync_playwright
 def silly_scrape(site_identifier, target_url):
     """
     scrapes specified ELIT filepath and returns the coram
-    name(s) and number of paragraphs without differentiating
-    material facts, obiter, ratio and final ruling
+    name(s), judgement date and number of paragraphs without
+    differentiating material facts, obiter, ratio and final ruling
+
+    FUA add scraping of date
     """
     judge_array = []
     with sync_playwright() as p:
@@ -22,8 +24,10 @@ def silly_scrape(site_identifier, target_url):
             combined_judge_array = page.query_selector_all(
                 '.Judg-Author, [id*="Judg-Author"]'
             )
-            paragaph_count = page.query_selector_all(
-                'p[class*="Judg-"], div[class*="Judg-"], span[class*="Judg-"]'
+            paragaph_count = len(
+                page.query_selector_all(
+                    'p[class*="Judg-"], div[class*="Judg-"], span[class*="Judg-"]'
+                )
             )
             if len(combined_judge_array) > 0:
                 for item in combined_judge_array:
@@ -44,8 +48,8 @@ def silly_scrape(site_identifier, target_url):
 def smart_scrape(target_url):
     """
     scrapes specified ELIT filepath and returns the coram
-    name(s) and number of paragraphs and differntial
-    material facts, obiter, ratio and final ruling
+    name(s), judgement date and number of paragraphs that also
+    differentiates material facts, obiter, ratio and final ruling
 
     FUA might need to implement this by making calls to
     a locally trained LLM
