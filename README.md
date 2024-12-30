@@ -10,13 +10,9 @@ Put this together in [6 hours and 41 minutes](https://github.com/gongahkia/botto
 
 I am the king of procrastination.
 
-![](./asset/rationale.png)
-
-## Screenshots
-
-![](./asset/screenshot-1.png)
-![](./asset/screenshot-2.png)
-![](./asset/screenshot-3.png)
+<div align="center">
+    <img src="./asset/rationale.png" height="450px"></img>
+</div>
 
 ## [Scraper](./src/scraper.py)
 
@@ -240,6 +236,12 @@ r.altair_visualise(filepath)
 </tr>
 </tbody>
 </table>
+
+## Screenshots
+
+![](./asset/screenshot-1.png)
+![](./asset/screenshot-2.png)
+![](./asset/screenshot-3.png)
 
 ## Usage
 
