@@ -8,6 +8,10 @@ Judges' stats, scraped from [Elit](https://www.elitigation.sg/_layouts/IELS/Home
 
 > TODO add here
 
+## Transpilation outputs
+
+> TODO add here
+
 ## Usage
 
 ```console

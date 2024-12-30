@@ -4,3 +4,10 @@ pytest-playwright==0.15.0
 pytest-xdist==3.2.1
 pytest-cov==3.0.0
 pytest-dependency==0.5.0
+pandas
+seaborn 
+matplotlib
+PyQt5
+bokeh
+xmltodict
+h5py
