@@ -78,7 +78,7 @@ def smart_find_url_endpoint(
     return url_array
 
 
-def silly_scrape(target_url, site_identifier="elit"):
+def silly_scrape(target_url, storage_map, site_identifier="elit"):
     """
     scrapes specified ELIT url and returns the coram
     name(s), judgement date and number of paragraphs without
@@ -98,7 +98,7 @@ def silly_scrape(target_url, site_identifier="elit"):
             combined_judge_array = page.query_selector_all(
                 '.Judg-Author, [id*="Judg-Author"]'
             )
-            paragaph_count = len(
+            paragraph_count = len(
                 page.query_selector_all(
                     'p[class*="Judg-"], div[class*="Judg-"], span[class*="Judg-"]'
                 )
@@ -112,18 +112,16 @@ def silly_scrape(target_url, site_identifier="elit"):
             print(f"Error: Unable to process page URL {target_url}: {e}")
         finally:
             browser.close()
-    wrapper = {
-        title: {
-            "coram": [
-                h.advanced_strip(h.remove_parentheses(h.sanitise(judge)), [":"])
-                for judge in judge_array
-            ],
-            "year": date_year,
-            "court": court,
-            "paragaph_count": paragaph_count,
-        }
+    storage_map[title] = {
+        "coram": [
+            h.advanced_strip(h.remove_parentheses(h.sanitise(judge)), [":"])
+            for judge in judge_array
+        ],
+        "year": date_year,
+        "court": court,
+        "paragraph_count": paragraph_count,
     }
-    return wrapper
+    return storage_map
 
 
 def smart_scrape(target_url):

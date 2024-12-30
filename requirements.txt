@@ -12,3 +12,4 @@ PyQt5
 bokeh
 xmltodict
 h5py
+altair

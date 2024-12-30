@@ -141,3 +141,72 @@ def generate_sql(data, target_db_name):
     conn.commit()
     conn.close()
     print(f"Success: SQL database generated: {target_db_name}")
+
+
+def generate_d3(target_filepath, output_file="index.html"):
+    """
+    generates a HTML file that uses a d3.js bar chart based on the specified json
+    """
+    html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Bar Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <svg width="800" height="400"></svg>
+    <script>
+        async function renderD3Chart(jsonFile) {{
+            const data = await d3.json(jsonFile);
+            const cases = Object.keys(data).map(key => {{
+                return {{
+                    name: key,
+                    count: data[key].paragraph_count
+                }};
+            }});
+
+            const svg = d3.select("svg");
+            const margin = {{ top: 20, right: 30, bottom: 40, left: 40 }};
+            const width = +svg.attr("width") - margin.left - margin.right;
+            const height = +svg.attr("height") - margin.top - margin.bottom;
+
+            const x = d3.scaleBand()
+                .domain(cases.map(d => d.name))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(cases, d => d.count)])
+                .nice()
+                .range([height, 0]);
+
+            const g = svg.append("g")
+                .attr("transform", `translate(${{margin.left}},${{margin.top}})`);
+
+            g.append("g")
+                .selectAll(".bar")
+                .data(cases)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.name))
+                .attr("y", d => y(d.count))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.count));
+
+            g.append("g")
+                .attr("class", "axis axis--x")
+                .attr("transform", `translate(0,${{height}})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .attr("class", "axis axis--y")
+                .call(d3.axisLeft(y));
+        }}
+        renderD3Chart('{target_filepath}');
+    </script>
+</body>
+</html>
+"""
+    with open(output_file, "w") as out_file:
+        out_file.write(html_content)
