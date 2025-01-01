@@ -1,9 +1,9 @@
-[![](https://img.shields.io/badge/bottomfeeder_1.0-passing-green)](https://github.com/gongahkia/bottomfeeder/releases/tag/1.0)
+[![](https://img.shields.io/badge/feeder_1.0-passing-green)](https://github.com/gongahkia/feeder/releases/tag/1.0)
 
 > [!IMPORTANT]  
-> Please read through [this disclaimer](#disclaimer) before using [Bottomfeeder](https://github.com/gongahkia/bottomfeeder).  
+> Please read through [this disclaimer](#disclaimer) before using [Feeder](https://github.com/gongahkia/feeder).  
 
-# `Bottomfeeder` 🐟
+# `Feeder` 🐟
 
 Judges' [stats](https://dictionary.cambridge.org/dictionary/english/stats) *(that are actually up-to-date)*!
   
@@ -253,7 +253,7 @@ r.altair_visualise(filepath)
 ## Usage
 
 ```console
-$ git clone https://github.com/gongahkia/bottomfeeder
+$ git clone https://github.com/gongahkia/feeder
 $ make config
 $ make
 ```
@@ -266,7 +266,7 @@ By engaging with this project in any way, you acknowledge that the data and find
 
 ## Reference
 
-The name `Bottomfeeder` is in reference to [Richard A. Bottomfeeder](https://spongebob.fandom.com/wiki/Richard_A._Bottomfeeder), a prison warden at [Bikini Bottom Jail](https://spongebob.fandom.com/wiki/Bikini_Bottom_Jail).
+The name `Feeder` is in reference to [Richard A. Bottomfeeder](https://spongebob.fandom.com/wiki/Richard_A._Bottomfeeder), a prison warden at [Bikini Bottom Jail](https://spongebob.fandom.com/wiki/Bikini_Bottom_Jail).
 He first appears in the episode [Krabs vs. Plankton](https://spongebob.fandom.com/wiki/Krabs_vs._Plankton), where he acts as [Mr. Krabs'](https://spongebob.fandom.com/wiki/Eugene_H._Krabs) attorney.
 
 ![](./asset/bottomfeeder.jpg)
