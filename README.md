@@ -13,7 +13,7 @@ All data is scraped from [www.elitigation.sg](https://www.elitigation.sg/_layout
 
 ## Rationale
 
-Put this together in [6 hours and 41 minutes](https://github.com/gongahkia/bottomfeeder/commit/d056533d8794f0a3d3cd2a248bd86a3ec727405f) for [fun](https://dictionary.cambridge.org/dictionary/english/fun).
+Put this together in [6 hours and 41 minutes](https://github.com/gongahkia/feeder/commit/d056533d8794f0a3d3cd2a248bd86a3ec727405f) for [fun](https://dictionary.cambridge.org/dictionary/english/fun).
 
 I am the king of procrastination.
 
