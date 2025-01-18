@@ -5,9 +5,7 @@
 
 # `Feeder` 🐟
 
-Judges' [stats](https://dictionary.cambridge.org/dictionary/english/stats) *(that are actually up-to-date)*!
-  
-Judges and their respective rulings extracted, indexed, analyzed and visualised.  
+Judges and their respective rulings extracted, indexed, [analyzed and visualised](https://dictionary.cambridge.org/dictionary/english/stats).  
   
 All data is scraped from [www.elitigation.sg](https://www.elitigation.sg/_layouts/IELS/HomePage/Pages/Home.aspx). 
 
